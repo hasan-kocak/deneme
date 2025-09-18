@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 
-// DEĞİŞİKLİK: useTranslation ve LanguageSwitcher kaldırıldı.
+// DEĞİŞİKLİK: FontAwesome import'ları tamamen kaldırıldı.
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 
+// Bu, bir önceki denediğimiz çevirisiz Header'ın Font Awesome'dan da arındırılmış halidir.
 const Header = () => {
     const [scrolled, setScrolled] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -22,7 +23,6 @@ const Header = () => {
 
     const closeMobileMenu = () => setMobileMenuOpen(false);
 
-    // DEĞİŞİKLİK: t('...') fonksiyonları yerine metinler doğrudan yazıldı.
     const NavLinks = () => (
         <ul className="nav-menu">
             <li><NavLink to="/" onClick={closeMobileMenu}>Anasayfa</NavLink></li>
@@ -42,15 +42,17 @@ const Header = () => {
                         <nav className="desktop-nav">
                             <NavLinks />
                         </nav>
-                        <button className="mobile-menu-toggle" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
-                            <FontAwesomeIcon icon={mobileMenuOpen ? faTimes : faBars} />
+                        {/* DEĞİŞİKLİK: FontAwesomeIcon yerine basit metin karakterleri kullanıldı. */}
+                        <button className="mobile-menu-toggle" onClick={() => setMobileMenuOpen(!mobileMenuOpen)} style={{fontSize: '28px'}}>
+                            {mobileMenuOpen ? 'X' : '☰'}
                         </button>
                     </div>
                 </div>
             </header>
             <div className={`mobile-menu ${mobileMenuOpen ? 'active' : ''}`}>
-                <button className="mobile-menu-close" onClick={closeMobileMenu}>
-                    <FontAwesomeIcon icon={faTimes} />
+                {/* DEĞİŞİKLİK: FontAwesomeIcon yerine basit metin karakterleri kullanıldı. */}
+                <button className="mobile-menu-close" onClick={closeMobileMenu} style={{fontSize: '32px'}}>
+                    X
                 </button>
                 <nav> <NavLinks /> </nav>
             </div>
