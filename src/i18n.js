@@ -7,7 +7,7 @@ import translationEN from './locales/en/translation.json';
 
 i18n
   // Tarayıcı dilini algılama eklentisini ekle
-  .use(LanguageDetector)
+  // .use(LanguageDetector)
   // i18next'i react-i18next'e geçir
   .use(initReactI18next)
   // i18next'i başlat
