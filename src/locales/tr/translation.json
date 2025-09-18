@@ -1,0 +1,114 @@
+{
+  "header": {
+    "home": "Anasayfa",
+    "about": "Hakkımızda",
+    "services": "Hizmetlerimiz",
+    "team": "Ekibimiz",
+    "contact": "İletişim",
+    "logo": "Av. Ömer"
+  },
+  "hero": {
+    "subtitle": "Av. Ömer Hukuk & Danışmanlık",
+    "title": "Adaletin <1>Modern</1> Yüzü.",
+    "description": "Karmaşık hukuki süreçlerde, 25 yıllık tecrübemiz ve yenilikçi bakış açımızla yanınızdayız. Güvenilir, şeffaf ve sonuç odaklı çözümler sunuyoruz.",
+    "services_button": "Hizmet Alanlarımız",
+    "appointment_button": "Randevu Al"
+  },
+  "about": {
+    "title": "Deneyim ve Güvenin Adresi",
+    "p1": "1998 yılından bu yana hukuk alanında faaliyet gösteren büromuz, müvekkillerine en kaliteli hizmeti sunma amacıyla kurulmuştur. Uzman kadromuz ve geniş hizmet yelpazemizle her türlü hukuki sorununuza çözüm üretiyoruz.",
+    "p2": "Mesleki etik değerlere bağlı kalarak, müvekkil memnuniyetini ön planda tutan yaklaşımımızla, davanızın en iyi şekilde sonuçlanması için titizlikle çalışıyoruz.",
+    "team_button": "Ekibimizle Tanışın"
+  },
+  "services": {
+    "title": "Hizmet Alanlarımız",
+    "description": "Geniş hizmet yelpazemizle her türlü hukuki ihtiyacınıza profesyonel çözümler sunuyoruz.",
+    "cards": [
+      {
+        "title": "Gayrimenkul Hukuku",
+        "description": "Tapu işlemleri, kiralama, satış sözleşmeleri ve inşaat hukuku konularında uzman danışmanlık.",
+        "imageUrl": "https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg"
+      },
+      {
+        "title": "Ticaret Hukuku",
+        "description": "Şirket kuruluşu, ticari uyuşmazlıklar ve sözleşme hukuku alanlarında profesyonel hizmet.",
+        "imageUrl": "https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg"
+      },
+      {
+        "title": "Aile Hukuku",
+        "description": "Boşanma, velayet, nafaka ve evlilik öncesi anlaşmalar gibi konularda hukuki destek.",
+        "imageUrl": "https://images.pexels.com/photos/4226769/pexels-photo-4226769.jpeg"
+      },
+      {
+        "title": "Vatandaşlık Hukuku",
+        "description": "Yabancıların vatandaşlık başvuruları, oturma ve çalışma izinleri gibi konularda hukuki destek.",
+        "imageUrl": "https://images.pexels.com/photos/545046/pexels-photo-545046.jpeg"
+      },
+      {
+        "title": "İş Hukuku",
+        "description": "İş sözleşmeleri, işçi hakları, işveren yükümlülükleri ve iş mahkemesi davaları.",
+        "imageUrl": "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg"
+      },
+      {
+        "title": "Borçlar Hukuku",
+        "description": "Sözleşme hukuku, tazminat davaları ve alacak takibi gibi uyuşmazlıkların çözümü.",
+        "imageUrl": "https://images.pexels.com/photos/5905497/pexels-photo-5905497.jpeg"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Hukuki Sorunlarınız İçin Hemen İletişime Geçin",
+    "description": "Uzman avukat kadromuzla 7/24 hizmetinizdeyiz. Ücretsiz ilk görüşme için hemen randevu alın.",
+    "button": "Ücretsiz Danışmanlık"
+  },
+  "footer": {
+    "about_title": "Hukuk Bürosu",
+    "about_text": "1998 yılından bu yana güvenilir hukuki danışmanlık hizmeti sunmakta olan büromuz, müvekkil memnuniyetini ön planda tutarak çalışmaktadır.",
+    "links_title": "Hızlı Linkler",
+    "contact_title": "İletişim"
+  },
+  "contact_page": {
+    "title": "İletişim",
+    "description": "Hukuki danışmanlık ihtiyaçlarınız için bizimle iletişime geçin. Size en kısa sürede dönüş yapacağız.",
+    "form_title": "Mesaj Gönder",
+    "name_label": "Ad Soyad",
+    "name_error": "Ad soyad alanı zorunludur.",
+    "email_label": "E-posta",
+    "email_error_required": "E-posta alanı zorunludur.",
+    "email_error_pattern": "Lütfen geçerli bir e-posta adresi girin.",
+    "phone_label": "Telefon",
+    "phone_error_required": "Telefon numarası zorunludur.",
+    "phone_error_pattern": "Lütfen sadece rakam kullanarak geçerli bir telefon numarası girin.",
+    "subject_label": "Konu",
+    "subject_error": "Konu alanı zorunludur.",
+    "message_label": "Mesaj",
+    "message_error": "Mesaj alanı zorunludur.",
+    "submit_button": "Gönder",
+    "submit_button_sending": "Gönderiliyor...",
+    "info_title": "İletişim Bilgileri",
+    "address_title": "Adres",
+    "phone_title": "Telefon",
+    "email_title": "E-posta",
+    "hours_title": "Çalışma Saatleri",
+    "hours_p1": "Pzt - Cum: 09:00 - 18:00",
+    "hours_p2": "Cmt: 09:00 - 14:00"
+  },
+  "team_page": {
+    "title": "Ekibimiz",
+    "subtitle": "Alanında uzman, deneyimli ve dinamik kadromuzla tanışın.",
+    "members": [
+      {
+        "name": "Av. Ömer Yılmaz",
+        "title": "Kurucu Avukat",
+        "bio": "Ceza Hukuku ve Ticaret Hukuku alanlarında 25 yıllık deneyime sahip olan Ömer Yılmaz, büromuzun kurucusudur.",
+        "imageKey": "omerYilmaz"
+      },
+      {
+        "name": "Av. Ayşe Kaya",
+        "title": "Ortak Avukat",
+        "bio": "Aile Hukuku ve Gayrimenkul Hukuku konularında uzmanlaşmıştır. Müvekkil odaklı çözümleriyle tanınır.",
+        "imageKey": "ayseKaya"
+      }
+    ]
+  }
+}
