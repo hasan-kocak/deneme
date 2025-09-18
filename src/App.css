@@ -809,9 +809,9 @@ body {
   /* Bu, hem modern bir görünüm sağlar hem de okunabilirliği artırır. */
   background: rgba(17, 34, 64, 0.85);
   /* --bg-dark-card'ın (#112240) yarı saydam hali */
-  /* -webkit-backdrop-filter: blur(10px); */
+  -webkit-backdrop-filter: blur(10px);
   /* Safari için */
-  /* backdrop-filter: blur(10px); */
+  backdrop-filter: blur(10px);
   /* Modern tarayıcılar için "cam" efekti */
 
   z-index: 2000;

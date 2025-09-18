@@ -2,20 +2,16 @@ import 'react-app-polyfill/ie11';
 import 'react-app-polyfill/stable';
 
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+// DEĞİŞİKLİK: 'react-dom/client' yerine 'react-dom' kullanacağız
+import ReactDOM from 'react-dom'; 
 import App from './App';
 import './i18n';
-import "core-js/stable";
-import "regenerator-runtime/runtime";
 
-// YENİ EKLENEN SATIRLAR: Tarayıcının varsayılan kaydırma davranışını devre dışı bırakır.
-if ('scrollRestoration' in window.history) {
-  window.history.scrollRestoration = 'manual';
-}
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+// DEĞİŞİKLİK: Yeni createRoot API'si yerine eski, kararlı render metodu kullanılacak
+const rootElement = document.getElementById('root');
+ReactDOM.render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>
+  </React.StrictMode>,
+  rootElement
 );
