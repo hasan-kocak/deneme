@@ -2,53 +2,40 @@ import React from 'react';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 
-// DEĞİŞİKLİK: Header ve Footer gibi temel yapıları geri getirdik.
-import Header from './components/Header';
-import Footer from './components/Footer';
-import ScrollToTopButton from './components/ScrollToTop';
-import ScrollToTopOnNavigate from './components/ScrollToTopOnNavigate';
+// DEĞİŞİKLİK: Header, Footer ve diğer özel bileşenlerin import'ları kaldırıldı.
 
-// DEĞİŞİKLİK: Gerçek sayfalar yerine basit test bileşenleri kullanacağız
+// Test bileşenleri aynı kalıyor.
 const MinimalHomePage = () => (
   <div className="page-wrapper">
-    <div className="container" style={{ color: 'white', minHeight: '50vh' }}>
-      <h1>Anasayfa Çalışıyor</h1>
-      <p>Eğer bunu görüyorsanız, Router ve Header/Footer sorunsuz yüklenmiştir.</p>
-      <p>Şimdi bir sonraki adıma geçebilirsiniz.</p>
+    <div className="container" style={{ color: 'white', minHeight: '50vh', paddingTop: '50px' }}>
+      <h1>Router Testi Başarılı</h1>
+      <p>Eğer bunu görüyorsanız, react-router-dom kütüphanesi tek başına çalışıyor demektir.</p>
+      <p>Sorun büyük ihtimalle Header veya Footer bileşeninde.</p>
       <br/>
-      <Link to="/hakkimizda" style={{ color: 'var(--accent-gold)' }}>Hakkımızda Sayfasını Test Et</Link>
+      <Link to="/hakkimizda" style={{ color: 'var(--accent-gold)', fontSize: '20px' }}>Hakkımızda Sayfasını Test Etmek İçin Tıkla</Link>
     </div>
   </div>
 );
 
 const MinimalAboutPage = () => (
   <div className="page-wrapper">
-    <div className="container" style={{ color: 'white', minHeight: '50vh' }}>
+    <div className="container" style={{ color: 'white', minHeight: '50vh', paddingTop: '50px' }}>
       <h1>Hakkımızda Sayfası Çalışıyor</h1>
       <p>Sayfa geçişleri de sorunsuz.</p>
     </div>
   </div>
 );
 
-
 function App() {
   return (
     <BrowserRouter>
-      <ScrollToTopOnNavigate />
-      <Header />
+      {/* DEĞİŞİKLİK: Header, Footer ve Scroll butonları kaldırıldı. */}
       <main>
-        {/* DEĞİŞİKLİK: Gerçek sayfalar yerine test sayfalarını kullanıyoruz */}
         <Routes>
           <Route path="/" element={<MinimalHomePage />} />
-          {/* Diğer linklerin de kırılmaması için geçici olarak yönlendirmeleri ayarlıyoruz */}
           <Route path="/hakkimizda" element={<MinimalAboutPage />} />
-          <Route path="/hizmetlerimiz" element={<MinimalHomePage />} />
-          <Route path="/ekibimiz" element={<MinimalHomePage />} />
-          <Route path="/iletisim" element={<MinimalHomePage />} />
         </Routes>
       </main>
-      <Footer />
-      <ScrollToTopButton />
     </BrowserRouter>
   );
 }
