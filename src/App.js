@@ -1,42 +1,37 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import './App.css';
 
-// DEĞİŞİKLİK: Header bileşenini geri import ediyoruz.
+// Bileşenler
 import Header from './components/Header';
+import Footer from './components/Footer';
+import ScrollToTopButton from './components/ScrollToTop'; // ScrollToTop'u yeniden isimlendirdik
+import ScrollToTopOnNavigate from './components/ScrollToTopOnNavigate';
 
-// Test bileşenleri aynı kalıyor.
-const MinimalHomePage = () => (
-  <div className="page-wrapper">
-    <div className="container" style={{ color: 'white', minHeight: '50vh' }}>
-      <h1>Header Testi</h1>
-      <p>Eğer bu sayfa mavi ekrana düşerse, sorun kesin olarak Header bileşenindedir.</p>
-      <br/>
-      <Link to="/hakkimizda" style={{ color: 'var(--accent-gold)', fontSize: '20px' }}>Hakkımızda Sayfasını Test Etmek İçin Tıkla</Link>
-    </div>
-  </div>
-);
-
-const MinimalAboutPage = () => (
-  <div className="page-wrapper">
-    <div className="container" style={{ color: 'white', minHeight: '50vh' }}>
-      <h1>Hakkımızda Sayfası Çalışıyor</h1>
-    </div>
-  </div>
-);
+// Sayfalar
+import HomePage from './pages/HomePage';
+import AboutPage from './pages/AboutPage';
+import ServicesPage from './pages/ServicesPage';
+import ContactPage from './pages/ContactPage';
+import TeamPage from './pages/TeamPage'; // Yeni Ekip Sayfası
 
 function App() {
   return (
     <BrowserRouter>
-      {/* DEĞİŞİKLİK: Header bileşenini geri ekledik. */}
+      <ScrollToTopOnNavigate />
       <Header />
       <main>
+        {/* Sayfa geçiş animasyonları için bir sarmalayıcı eklenebilir */}
         <Routes>
-          <Route path="/" element={<MinimalHomePage />} />
-          <Route path="/hakkimizda" element={<MinimalAboutPage />} />
+          <Route path="/" element={<HomePage />} />
+          <Route path="/hakkimizda" element={<AboutPage />} />
+          <Route path="/hizmetlerimiz" element={<ServicesPage />} />
+          <Route path="/ekibimiz" element={<TeamPage />} />
+          <Route path="/iletisim" element={<ContactPage />} />
         </Routes>
       </main>
-      {/* Footer ve diğerleri hala dışarıda */}
+      <Footer />
+      <ScrollToTopButton />
     </BrowserRouter>
   );
 }
