@@ -8,7 +8,6 @@ const LanguageSwitcher = () => {
     i18n.changeLanguage(lng);
   };
 
-  // Butonlar için basit stil
   const buttonStyle = {
     background: 'transparent',
     border: '1px solid var(--accent-gold)',
@@ -17,7 +16,8 @@ const LanguageSwitcher = () => {
     borderRadius: '5px',
     cursor: 'pointer',
     marginLeft: '10px',
-    fontWeight: '600'
+    fontWeight: '600',
+    fontSize: '14px' // Okunabilirliği artırmak için
   };
 
   const activeButtonStyle = {
@@ -29,13 +29,13 @@ const LanguageSwitcher = () => {
   return (
     <div className="language-switcher">
       <button 
-        style={i18n.language === 'tr' ? activeButtonStyle : buttonStyle} 
+        style={i18n.language.startsWith('tr') ? activeButtonStyle : buttonStyle} 
         onClick={() => changeLanguage('tr')}
       >
         TR
       </button>
       <button 
-        style={i18n.language === 'en' ? activeButtonStyle : buttonStyle} 
+        style={i18n.language.startsWith('en') ? activeButtonStyle : buttonStyle} 
         onClick={() => changeLanguage('en')}
       >
         EN
