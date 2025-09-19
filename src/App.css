@@ -255,9 +255,10 @@ body {
   font-size: 24px;
   cursor: pointer;
   z-index: 2001;
-  /* Başlangıçta ikon rengini beyaz yap */
   color: var(--text-light);
   transition: color 0.4s ease;
+  /* DEĞİŞİKLİK: Dil butonları ile arasına boşluk ekler */
+  margin-left: 20px;
 }
 
 .header.scrolled .mobile-menu-toggle {
